@@ -1,4 +1,4 @@
-package com.reactnativeanimations
+package com.cglryldrm.ReactNativeAnimations
 
 import android.os.Build
 import android.os.Bundle
