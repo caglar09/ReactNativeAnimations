@@ -2,6 +2,17 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { Link, Stack } from "expo-router";
 
+const animationList = [
+	{
+		title: "Modal Animation",
+		href: "modal-animation",
+	},
+	{
+		title: "Ticker Text",
+		href: "ticker-text",
+	},
+];
+
 const HomeRouter = () => {
 	return (
 		<View style={styles.container}>
@@ -10,7 +21,12 @@ const HomeRouter = () => {
 					headerTitle: "Home",
 				}}
 			/>
-			<Link href={{ pathname: "modal-animation" }}>Go to Modal Animation</Link>
+			{animationList.map((item) => (
+				<Link href={item.href} key={item.title} style={{ margin: 10 }}>
+					<Text>{item.title}</Text>
+				</Link>
+			))}
+			{/* <Link href={{ pathname: "modal-animation" }}>Go to Modal Animation</Link> */}
 		</View>
 	);
 };
