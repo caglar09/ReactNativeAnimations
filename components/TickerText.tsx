@@ -45,6 +45,7 @@ const TickerList = ({ fontSize, number, index }: TickerListProps) => {
 			withTiming(number, {
 				easing: (x: number) => {
 					"worklet";
+					// copied: https://easings.net/#easeInOutBack
 					const c1 = 1.70158;
 					const c2 = c1 * 1.525;
 
