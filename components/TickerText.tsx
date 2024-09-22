@@ -43,7 +43,7 @@ const TickerList = ({ fontSize, number, index }: TickerListProps) => {
 		animatedValue.value = withDelay(
 			index * stagger,
 			withTiming(number, {
-				easing: Easing.bezier(0.85, 0, 0.15, 1),
+				easing: Easing.bezier(0.68, -0.6, 0.32, 1.6),
 				reduceMotion: ReduceMotion.System,
 			})
 		);
