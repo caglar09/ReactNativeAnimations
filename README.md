@@ -1,6 +1,18 @@
-# React Native Animations 
+# React Native Animations
 
-Sample animation studies using React-native 
+Sample animation studies using React-native
+
+## Introduction
+
+This repo contains sample animations for React Native.
+
+## Dependencies
+
+```
+- @react-native-community/blur
+- @shopify/react-native-skia
+- react-native-reanimated
+```
 
 ## 1. Modal Animation
 
