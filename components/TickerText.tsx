@@ -13,7 +13,7 @@ import Animated, {
 } from "react-native-reanimated";
 
 const numbersToNice = [...Array(10).keys()];
-const stagger = 80;
+const stagger = 50;
 
 const Tick = ({
 	children,
@@ -119,7 +119,7 @@ const Ticker = ({ value, fontSize = 50 }: TickerProps) => {
 			{newFontSize && !isNaN(newFontSize) && (
 				<View style={styles.textContainer}>
 					{splittedValue.map((text, index) => {
-						const key = [text, index].join("-");
+						const key = ["n", text, "i", index].join("-");
 						if (!isNaN(parseInt(text))) {
 							return (
 								<TickerList
@@ -131,7 +131,11 @@ const Ticker = ({ value, fontSize = 50 }: TickerProps) => {
 							);
 						}
 						return (
-							<Tick key={index} fontSize={newFontSize}>
+							<Tick
+								key={index}
+								fontSize={newFontSize}
+								style={styles.characters}
+							>
 								{text}
 							</Tick>
 						);
@@ -152,6 +156,9 @@ const styles = StyleSheet.create({
 	textContainer: { flexDirection: "row", alignItems: "center" },
 	overflowH: {
 		overflow: "hidden",
+	},
+	characters: {
+		color: "#a9a9a9",
 	},
 });
 

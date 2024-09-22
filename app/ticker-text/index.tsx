@@ -8,7 +8,7 @@ import { usePeriodic } from "../../hooks";
 const TickerText = () => {
 	const [value, setValue] = useState(0);
 
-	const randomize = () => setValue(Math.floor(Math.random() * 10000));
+	const randomize = () => setValue(Math.random() * 10000);
 	usePeriodic(randomize, 3000);
 	// useEffect(() => {
 	// 	randomize();
